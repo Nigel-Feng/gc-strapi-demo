@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_plp_shop_by_brands",
+  "info": {
+    "displayName": "ShopByBrand",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "brands": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.brand"
+    }
+  }
+}

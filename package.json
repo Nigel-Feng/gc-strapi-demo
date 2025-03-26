@@ -1,0 +1,20 @@
+{
+  "name": "gc-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces": [
+    "my-next-project",
+    "my-strapi-project"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"yarn workspace my-next-project dev\" \"yarn workspace my-strapi-project develop\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "prettier": "^3.5.3"
+  }
+}

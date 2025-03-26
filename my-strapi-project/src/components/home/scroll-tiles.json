@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_home_scroll_tiles",
+  "info": {
+    "displayName": "ScrollTiles"
+  },
+  "options": {},
+  "attributes": {
+    "tiles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.scroll-tile"
+    }
+  }
+}

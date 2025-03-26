@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_listing_pages",
+  "info": {
+    "singularName": "product-listing-page",
+    "pluralName": "product-listing-pages",
+    "displayName": "ProductListingPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "metaData": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "topPromotion": {
+      "type": "dynamiczone",
+      "components": [
+        "plp.shop-by-brand",
+        "plp.shop-by-category"
+      ]
+    },
+    "bottomPromotion": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.html"
+      ]
+    }
+  }
+}

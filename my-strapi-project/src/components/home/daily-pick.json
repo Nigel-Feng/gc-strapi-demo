@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_home_daily_picks",
+  "info": {
+    "displayName": "DailyPick"
+  },
+  "options": {},
+  "attributes": {
+    "queryUrl": {
+      "type": "string"
+    },
+    "featuredDealsLink": {
+      "type": "string"
+    },
+    "marketingTabletImageSrc": {
+      "type": "string"
+    },
+    "marketingImageSrc": {
+      "type": "string"
+    },
+    "marketingMobileImageSrc": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_plp_shop_by_categories",
+  "info": {
+    "displayName": "ShopByCategory",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "categories": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.category"
+    }
+  }
+}
