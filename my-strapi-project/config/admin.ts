@@ -20,7 +20,7 @@ export default ({ env }) => ({
       allowedOrigins: "*",
       async handler(uid, { documentId, locale, status }) {
         const type = uid.split(".")[1];
-        return `http://127.0.0.1:1338/preview/${type}/${documentId}`;
+        return `${env("PREVIEW_CLIENT_URL")}/preview/${type}/${documentId}`;
       },
     },
   },
