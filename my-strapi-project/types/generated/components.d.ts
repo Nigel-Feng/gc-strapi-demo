@@ -41,6 +41,124 @@ export interface HomeScrollTiles extends Struct.ComponentSchema {
   };
 }
 
+export interface PdpArticle extends Struct.ComponentSchema {
+  collectionName: "components_pdp_articles";
+  info: {
+    description: "";
+    displayName: "Article";
+  };
+  attributes: {
+    name: Schema.Attribute.Enumeration<["Article"]> & Schema.Attribute.DefaultTo<"Article">;
+  };
+}
+
+export interface PdpCtaButton extends Struct.ComponentSchema {
+  collectionName: "components_pdp_cta_buttons";
+  info: {
+    displayName: "CTAButton";
+  };
+  attributes: {
+    name: Schema.Attribute.Enumeration<["ProductCTAButton"]> & Schema.Attribute.DefaultTo<"ProductCTAButton">;
+  };
+}
+
+export interface PdpDeliveryAndStore extends Struct.ComponentSchema {
+  collectionName: "components_pdp_delivery_and_stores";
+  info: {
+    displayName: "DeliveryAndStore";
+  };
+  attributes: {
+    name: Schema.Attribute.Enumeration<["DeliveryAndStore "]> & Schema.Attribute.DefaultTo<"DeliveryAndStore ">;
+  };
+}
+
+export interface PdpDescription extends Struct.ComponentSchema {
+  collectionName: "components_pdp_descriptions";
+  info: {
+    displayName: "Description";
+  };
+  attributes: {
+    name: Schema.Attribute.Enumeration<["ProductDescription"]> & Schema.Attribute.DefaultTo<"ProductDescription">;
+  };
+}
+
+export interface PdpGallery extends Struct.ComponentSchema {
+  collectionName: "components_pdp_galleries";
+  info: {
+    description: "";
+    displayName: "Gallery";
+  };
+  attributes: {
+    name: Schema.Attribute.Enumeration<["Gallery"]> & Schema.Attribute.DefaultTo<"Gallery">;
+  };
+}
+
+export interface PdpPrice extends Struct.ComponentSchema {
+  collectionName: "components_pdp_prices";
+  info: {
+    description: "";
+    displayName: "Price";
+  };
+  attributes: {
+    name: Schema.Attribute.Enumeration<["Price"]> & Schema.Attribute.DefaultTo<"Price">;
+  };
+}
+
+export interface PdpProductDetail extends Struct.ComponentSchema {
+  collectionName: "components_pdp_product_details";
+  info: {
+    description: "";
+    displayName: "ProductDetail";
+  };
+  attributes: {
+    name: Schema.Attribute.Enumeration<["ProductDetail"]> & Schema.Attribute.DefaultTo<"ProductDetail">;
+  };
+}
+
+export interface PdpProductMainContent extends Struct.ComponentSchema {
+  collectionName: "components_pdp_product_main_contents";
+  info: {
+    description: "";
+    displayName: "ProductMainContent";
+  };
+  attributes: {
+    name: Schema.Attribute.Enumeration<["ProductMainContent"]> & Schema.Attribute.DefaultTo<"ProductMainContent">;
+  };
+}
+
+export interface PdpProductPrimaryRow extends Struct.ComponentSchema {
+  collectionName: "components_pdp_product_primary_rows";
+  info: {
+    description: "";
+    displayName: "ProductPrimaryRow";
+  };
+  attributes: {
+    name: Schema.Attribute.Enumeration<["ProductPrimaryRow"]> & Schema.Attribute.DefaultTo<"ProductPrimaryRow">;
+  };
+}
+
+export interface PdpTitle extends Struct.ComponentSchema {
+  collectionName: "components_pdp_titles";
+  info: {
+    description: "";
+    displayName: "Title";
+  };
+  attributes: {
+    name: Schema.Attribute.Enumeration<["ProductTitle"]> & Schema.Attribute.DefaultTo<"ProductTitle">;
+  };
+}
+
+export interface PdpVideo extends Struct.ComponentSchema {
+  collectionName: "components_pdp_videos";
+  info: {
+    description: "";
+    displayName: "Video";
+  };
+  attributes: {
+    name: Schema.Attribute.Enumeration<["ProductVideo"]> & Schema.Attribute.DefaultTo<"ProductVideo">;
+  };
+}
+
 export interface PlpShopByBrand extends Struct.ComponentSchema {
   collectionName: "components_plp_shop_by_brands";
   info: {
@@ -73,6 +191,17 @@ export interface SharedBrand extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<"images" | "files" | "videos" | "audios">;
     name: Schema.Attribute.String;
     seoUrl: Schema.Attribute.String;
+  };
+}
+
+export interface SharedBreadcrumb extends Struct.ComponentSchema {
+  collectionName: "components_shared_breadcrumbs";
+  info: {
+    description: "";
+    displayName: "Breadcrumb";
+  };
+  attributes: {
+    name: Schema.Attribute.Enumeration<["Breadcrumb"]> & Schema.Attribute.DefaultTo<"Breadcrumb">;
   };
 }
 
@@ -197,9 +326,21 @@ declare module "@strapi/strapi" {
       "home.daily-pick": HomeDailyPick;
       "home.hero-banner": HomeHeroBanner;
       "home.scroll-tiles": HomeScrollTiles;
+      "pdp.article": PdpArticle;
+      "pdp.cta-button": PdpCtaButton;
+      "pdp.delivery-and-store": PdpDeliveryAndStore;
+      "pdp.description": PdpDescription;
+      "pdp.gallery": PdpGallery;
+      "pdp.price": PdpPrice;
+      "pdp.product-detail": PdpProductDetail;
+      "pdp.product-main-content": PdpProductMainContent;
+      "pdp.product-primary-row": PdpProductPrimaryRow;
+      "pdp.title": PdpTitle;
+      "pdp.video": PdpVideo;
       "plp.shop-by-brand": PlpShopByBrand;
       "plp.shop-by-category": PlpShopByCategory;
       "shared.brand": SharedBrand;
+      "shared.breadcrumb": SharedBreadcrumb;
       "shared.button": SharedButton;
       "shared.category": SharedCategory;
       "shared.html": SharedHtml;

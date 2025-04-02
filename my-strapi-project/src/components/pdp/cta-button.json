@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_pdp_cta_buttons",
+  "info": {
+    "displayName": "CTAButton"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "ProductCTAButton"
+      ],
+      "default": "ProductCTAButton"
+    }
+  }
+}

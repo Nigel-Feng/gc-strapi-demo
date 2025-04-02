@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_detail_pages",
+  "info": {
+    "singularName": "product-detail-page",
+    "pluralName": "product-detail-pages",
+    "displayName": "ProductDetailPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "layout": {
+      "type": "dynamiczone",
+      "components": [
+        "pdp.product-primary-row",
+        "pdp.product-main-content",
+        "shared.breadcrumb"
+      ]
+    },
+    "subLayoutPrimaryRow": {
+      "type": "dynamiczone",
+      "components": [
+        "pdp.gallery",
+        "pdp.product-detail"
+      ]
+    },
+    "subLayoutMainContent": {
+      "type": "dynamiczone",
+      "components": [
+        "pdp.video",
+        "pdp.article",
+        "pdp.description"
+      ]
+    },
+    "subLayoutProductDetail": {
+      "type": "dynamiczone",
+      "components": [
+        "pdp.price",
+        "pdp.title",
+        "pdp.cta-button",
+        "pdp.delivery-and-store"
+      ]
+    }
+  }
+}

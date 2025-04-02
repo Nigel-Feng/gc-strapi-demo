@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_pdp_prices",
+  "info": {
+    "displayName": "Price",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "Price"
+      ],
+      "default": "Price"
+    }
+  }
+}

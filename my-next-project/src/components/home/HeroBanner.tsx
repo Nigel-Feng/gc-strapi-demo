@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "@/components/shared/Button";
 
 const HeroBanner: React.FC<{ data: any }> = ({ data }) => {
   const button = data.button?.[0];

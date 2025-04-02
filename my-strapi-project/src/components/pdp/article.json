@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_pdp_articles",
+  "info": {
+    "displayName": "Article",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "Article"
+      ],
+      "default": "Article"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_pdp_product_details",
+  "info": {
+    "displayName": "ProductDetail",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "ProductDetail"
+      ],
+      "default": "ProductDetail"
+    }
+  }
+}

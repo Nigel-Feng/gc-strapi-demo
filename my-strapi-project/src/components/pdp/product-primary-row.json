@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_pdp_product_primary_rows",
+  "info": {
+    "displayName": "ProductPrimaryRow",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "ProductPrimaryRow"
+      ],
+      "default": "ProductPrimaryRow"
+    }
+  }
+}

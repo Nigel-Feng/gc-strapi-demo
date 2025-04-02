@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_pdp_delivery_and_stores",
+  "info": {
+    "displayName": "DeliveryAndStore"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "DeliveryAndStore "
+      ],
+      "default": "DeliveryAndStore "
+    }
+  }
+}

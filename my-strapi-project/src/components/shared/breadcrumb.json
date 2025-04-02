@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_breadcrumbs",
+  "info": {
+    "displayName": "Breadcrumb",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "Breadcrumb"
+      ],
+      "default": "Breadcrumb"
+    }
+  }
+}

@@ -379,6 +379,35 @@ export interface ApiHomeHome extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiProductDetailPageProductDetailPage extends Struct.CollectionTypeSchema {
+  collectionName: "product_detail_pages";
+  info: {
+    description: "";
+    displayName: "ProductDetailPage";
+    pluralName: "product-detail-pages";
+    singularName: "product-detail-page";
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
+    layout: Schema.Attribute.DynamicZone<["pdp.product-primary-row", "pdp.product-main-content", "shared.breadcrumb"]>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<"oneToMany", "api::product-detail-page.product-detail-page"> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    subLayoutMainContent: Schema.Attribute.DynamicZone<["pdp.video", "pdp.article", "pdp.description"]>;
+    subLayoutPrimaryRow: Schema.Attribute.DynamicZone<["pdp.gallery", "pdp.product-detail"]>;
+    subLayoutProductDetail: Schema.Attribute.DynamicZone<
+      ["pdp.price", "pdp.title", "pdp.cta-button", "pdp.delivery-and-store"]
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
+  };
+}
+
 export interface ApiProductListingPageProductListingPage extends Struct.CollectionTypeSchema {
   collectionName: "product_listing_pages";
   info: {
@@ -816,6 +845,7 @@ declare module "@strapi/strapi" {
       "admin::user": AdminUser;
       "api::global.global": ApiGlobalGlobal;
       "api::home.home": ApiHomeHome;
+      "api::product-detail-page.product-detail-page": ApiProductDetailPageProductDetailPage;
       "api::product-listing-page.product-listing-page": ApiProductListingPageProductListingPage;
       "plugin::content-releases.release": PluginContentReleasesRelease;
       "plugin::content-releases.release-action": PluginContentReleasesReleaseAction;
