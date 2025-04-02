@@ -1,4 +1,3 @@
-import BlocksRender from "@/components/shared/BlocksRender";
 import strapiRequest from "@/utils/request";
 import { cache } from "react";
 import { Metadata } from "next";
