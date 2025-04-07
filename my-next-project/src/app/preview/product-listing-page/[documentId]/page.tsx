@@ -1,14 +1,17 @@
 import BlocksRender from "@/components/shared/BlocksRender";
 import ShopByBrand from "@/components/plp/ShopByBrand";
 import ShopByCategory from "@/components/plp/ShopByCategory";
+import MainContent from "@/components/plp/main-content/index";
 import strapiRequest from "@/utils/request";
 import { cache } from "react";
 import { Metadata } from "next";
 import { map } from "lodash";
 
+import "instantsearch.css/themes/satellite-min.css";
+
 const getPLPLayout = cache(async (documentId: string) => {
   const response = await strapiRequest(
-    `/api/product-listing-pages/${documentId}?populate[0]=metaData&populate[1]=topPromotion.button&populate[2]=topPromotion.brands&populate[3]=topPromotion.brands.image&populate[4]=topPromotion.categories&populate[5]=bottomPromotion`
+    `/api/product-listing-pages/${documentId}?populate[0]=mainContent&populate[1]=topPromotion.button&populate[2]=topPromotion.brands&populate[3]=topPromotion.brands.image&populate[4]=topPromotion.categories&populate[5]=bottomPromotion`
   );
 
   const layout = response.data.data;
@@ -48,14 +51,7 @@ async function ProductListingPage({ params }: PageParams) {
           }
         })}
 
-        <div className="flex gap-4">
-          <div className="bg-[#e7e7e7] h-[300px] w-[280px] flex items-center justify-center">
-            <span>plp facets section</span>
-          </div>
-          <div className="bg-[#e7e7e7] h-[300px] w-full flex items-center justify-center">
-            <span>plp results section</span>
-          </div>
-        </div>
+        <MainContent data={layout.mainContent} />
 
         {map(layout.bottomPromotion, (section: any) => {
           switch (section.__component) {

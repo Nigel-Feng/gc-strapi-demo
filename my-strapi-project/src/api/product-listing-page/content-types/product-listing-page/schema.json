@@ -11,11 +11,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "metaData": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.seo"
-    },
     "topPromotion": {
       "type": "dynamiczone",
       "components": [
@@ -28,6 +23,11 @@
       "components": [
         "shared.html"
       ]
+    },
+    "mainContent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "plp.main-content"
     }
   }
 }

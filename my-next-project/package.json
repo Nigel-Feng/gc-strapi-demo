@@ -11,12 +11,17 @@
   "dependencies": {
     "@strapi/blocks-react-renderer": "^1.0.2",
     "@tailwindcss/typography": "^0.5.16",
+    "algoliasearch": "^5.23.2",
     "axios": "^1.8.4",
     "classnames": "^2.5.1",
+    "instantsearch.css": "^8.5.1",
     "lodash": "^4.17.21",
     "next": "15.2.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-instantsearch": "^7.15.5",
+    "react-instantsearch-core": "^7.15.5",
+    "react-instantsearch-nextjs": "^0.4.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

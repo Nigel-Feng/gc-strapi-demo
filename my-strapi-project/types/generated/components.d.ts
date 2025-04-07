@@ -159,6 +159,16 @@ export interface PdpVideo extends Struct.ComponentSchema {
   };
 }
 
+export interface PlpMainContent extends Struct.ComponentSchema {
+  collectionName: "components_plp_main_contents";
+  info: {
+    displayName: "MainContent";
+  };
+  attributes: {
+    algoliaQuery: Schema.Attribute.JSON;
+  };
+}
+
 export interface PlpShopByBrand extends Struct.ComponentSchema {
   collectionName: "components_plp_shop_by_brands";
   info: {
@@ -337,6 +347,7 @@ declare module "@strapi/strapi" {
       "pdp.product-primary-row": PdpProductPrimaryRow;
       "pdp.title": PdpTitle;
       "pdp.video": PdpVideo;
+      "plp.main-content": PlpMainContent;
       "plp.shop-by-brand": PlpShopByBrand;
       "plp.shop-by-category": PlpShopByCategory;
       "shared.brand": SharedBrand;

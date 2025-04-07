@@ -426,7 +426,7 @@ export interface ApiProductListingPageProductListingPage extends Struct.Collecti
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<"oneToMany", "api::product-listing-page.product-listing-page"> &
       Schema.Attribute.Private;
-    metaData: Schema.Attribute.Component<"shared.seo", false>;
+    mainContent: Schema.Attribute.Component<"plp.main-content", false>;
     publishedAt: Schema.Attribute.DateTime;
     topPromotion: Schema.Attribute.DynamicZone<["plp.shop-by-brand", "plp.shop-by-category"]>;
     updatedAt: Schema.Attribute.DateTime;
