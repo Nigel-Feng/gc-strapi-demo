@@ -8,7 +8,9 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"yarn workspace my-next-project dev\" \"yarn workspace my-strapi-project develop\""
+    "start": "concurrently \"yarn workspace my-next-project dev\" \"yarn workspace my-strapi-project develop\"",
+    "next": "yarn workspace my-next-project",
+    "strapi": "yarn workspace my-strapi-project develop"
   },
   "author": "",
   "license": "ISC",

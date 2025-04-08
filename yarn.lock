@@ -1158,6 +1158,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@growthbook/growthbook@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "@growthbook/growthbook@npm:1.4.1"
+  dependencies:
+    dom-mutator: "npm:^0.6.0"
+  checksum: 10c0/952d27de3aee4a8cd801984e908e27624ef354743b7e731552ebcd6d36d10f41c02d87a8de42c1170f81abc8ebfa9ae35f41f8436db19d0bc7a9eb5eff30563b
+  languageName: node
+  linkType: hard
+
 "@hapi/bourne@npm:^3.0.0":
   version: 3.0.0
   resolution: "@hapi/bourne@npm:3.0.0"
@@ -7482,6 +7491,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dom-mutator@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "dom-mutator@npm:0.6.0"
+  checksum: 10c0/9400acb585f41476198cc3411616aed17800e36a833d97d51b92035028332aeff6411ca4717da40c2972c73c7dd4a856ae99dc23db889012b78613d091b5d62d
+  languageName: node
+  linkType: hard
+
 "dom-serializer@npm:^1.0.1":
   version: 1.4.1
   resolution: "dom-serializer@npm:1.4.1"
@@ -12265,6 +12281,7 @@ __metadata:
   resolution: "my-next-project@workspace:my-next-project"
   dependencies:
     "@eslint/eslintrc": "npm:^3"
+    "@growthbook/growthbook": "npm:^1.4.1"
     "@strapi/blocks-react-renderer": "npm:^1.0.2"
     "@tailwindcss/postcss": "npm:^4"
     "@tailwindcss/typography": "npm:^0.5.16"

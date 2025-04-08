@@ -5,9 +5,10 @@ import ProductDetail from "./product-detail";
 type ProductPrimaryRowProps = {
   subLayoutPrimaryRow: any;
   subLayoutProductDetail: any;
+  imageSrc: string;
 };
 
-const ProductPrimaryRow = ({ subLayoutPrimaryRow, subLayoutProductDetail }: ProductPrimaryRowProps) => {
+const ProductPrimaryRow = ({ subLayoutPrimaryRow, subLayoutProductDetail, imageSrc }: ProductPrimaryRowProps) => {
   return (
     <div className="flex w-full border-[#dbdcde] border-t [&>:last-child]:border-l [&>:last-child]:border-[#dbdcde]">
       {map(subLayoutPrimaryRow, (section: any) => {
@@ -15,7 +16,7 @@ const ProductPrimaryRow = ({ subLayoutPrimaryRow, subLayoutProductDetail }: Prod
           case "pdp.gallery":
             return (
               <section key={"pdp.gallery" + section.id} className="px-2 pt-4 pb-8 basis-full flex-auto sticky top-0">
-                <Gallery />
+                <Gallery imageSrc={imageSrc} />
               </section>
             );
 

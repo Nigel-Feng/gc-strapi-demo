@@ -1,10 +1,10 @@
-const Gallery = () => {
+const Gallery = ({ imageSrc }: any) => {
   return (
     <>
       <div className="w-[600px] h-[600px] mx-auto">
         <img
           alt="Martin HD-28 Standard Dreadnought Acoustic Guitar Natural 1"
-          src="https://media.guitarcenter.com/is/image/MMGS7/M17679000001000-00-600x600.jpg"
+          src={imageSrc || "https://media.guitarcenter.com/is/image/MMGS7/M17679000001000-00-600x600.jpg"}
           className="w-[600px] h-[600px]"
           tabIndex={0}
         />
