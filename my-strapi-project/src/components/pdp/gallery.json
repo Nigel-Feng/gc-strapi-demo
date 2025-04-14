@@ -1,17 +1,12 @@
 {
   "collectionName": "components_pdp_galleries",
   "info": {
-    "displayName": "Gallery",
-    "description": ""
+    "displayName": "Gallery"
   },
   "options": {},
   "attributes": {
     "name": {
-      "type": "enumeration",
-      "enum": [
-        "Gallery"
-      ],
-      "default": "Gallery"
+      "type": "string"
     }
   }
 }

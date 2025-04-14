@@ -19,8 +19,11 @@ export default ({ env }) => ({
     config: {
       allowedOrigins: "*",
       async handler(uid, { documentId, locale, status }) {
-        const type = uid.split(".")[1];
-        return `${env("PREVIEW_CLIENT_URL")}/preview/${type}/${documentId}`;
+        if (uid === "api::page.page") {
+          return `${env("PREVIEW_CLIENT_URL")}/preview/${documentId}`;
+        }
+
+        return null;
       },
     },
   },

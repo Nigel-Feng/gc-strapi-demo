@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_daily_picks",
+  "info": {
+    "displayName": "DailyPick"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "config": {
+      "type": "json"
+    }
+  }
+}

@@ -6,11 +6,7 @@
   "options": {},
   "attributes": {
     "name": {
-      "type": "enumeration",
-      "enum": [
-        "ProductCTAButton"
-      ],
-      "default": "ProductCTAButton"
+      "type": "string"
     }
   }
 }

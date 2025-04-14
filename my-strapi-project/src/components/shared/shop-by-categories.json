@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_shop_by_categories",
+  "info": {
+    "displayName": "ShopByCategories"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_placeholder_page_templates",
+  "info": {
+    "displayName": "PageTemplate"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

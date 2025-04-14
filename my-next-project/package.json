@@ -11,6 +11,7 @@
   "dependencies": {
     "@growthbook/growthbook": "^1.4.1",
     "@strapi/blocks-react-renderer": "^1.0.2",
+    "@strapi/client": "^1.1.0",
     "@tailwindcss/typography": "^0.5.16",
     "algoliasearch": "^5.23.2",
     "axios": "^1.8.4",

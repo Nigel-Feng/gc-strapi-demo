@@ -2,9 +2,9 @@ import classNames from "classnames";
 
 interface ButtonProps {
   text: string;
-  size: "small" | "large";
+  size?: "small" | "large";
   link?: string;
-  type: "primary" | "secondary";
+  type?: "primary" | "secondary";
   className?: string;
 }
 

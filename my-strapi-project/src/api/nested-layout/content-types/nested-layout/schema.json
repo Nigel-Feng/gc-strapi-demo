@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nested_layouts",
+  "info": {
+    "singularName": "nested-layout",
+    "pluralName": "nested-layouts",
+    "displayName": "NestedLayout",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "contents": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.shop-by-categories",
+        "shared.html",
+        "shared.breadcrumb",
+        "pdp.video",
+        "pdp.title",
+        "pdp.price",
+        "pdp.gallery",
+        "pdp.description",
+        "pdp.delivery-and-store",
+        "pdp.cta-button",
+        "pdp.article",
+        "references.nested-layout"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "vertical",
+        "horizontal"
+      ]
+    }
+  }
+}

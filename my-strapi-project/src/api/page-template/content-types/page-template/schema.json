@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "page_templates",
+  "info": {
+    "singularName": "page-template",
+    "pluralName": "page-templates",
+    "displayName": "PageTemplate",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "contents": {
+      "type": "dynamiczone",
+      "components": [
+        "references.footer",
+        "references.header",
+        "placeholder.page-template",
+        "ab-test.pencil-banner"
+      ]
+    }
+  }
+}

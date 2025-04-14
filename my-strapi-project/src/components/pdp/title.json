@@ -1,17 +1,12 @@
 {
   "collectionName": "components_pdp_titles",
   "info": {
-    "displayName": "Title",
-    "description": ""
+    "displayName": "title"
   },
   "options": {},
   "attributes": {
     "name": {
-      "type": "enumeration",
-      "enum": [
-        "ProductTitle"
-      ],
-      "default": "ProductTitle"
+      "type": "string"
     }
   }
 }

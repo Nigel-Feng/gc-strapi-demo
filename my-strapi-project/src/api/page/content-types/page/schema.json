@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "seoUrl": {
+      "type": "string"
+    },
+    "page_template": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page-template.page-template"
+    },
+    "contents": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.shop-by-categories",
+        "shared.html",
+        "shared.breadcrumb",
+        "references.banner",
+        "pdp.video",
+        "pdp.title",
+        "pdp.price",
+        "pdp.gallery",
+        "pdp.description",
+        "pdp.delivery-and-store",
+        "pdp.cta-button",
+        "pdp.article",
+        "plp.results",
+        "references.nested-layout",
+        "shared.daily-pick"
+      ]
+    },
+    "metaData": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.meta-data"
+    }
+  }
+}

@@ -1,10 +1,25 @@
-import axios from "axios";
+import { strapi } from "@strapi/client";
 
-const strapiRequest = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_STRAPI_URL,
-  headers: {
-    Authorization: `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`,
-  },
+export const strapiClient = strapi({
+  baseURL: process.env.NEXT_PUBLIC_STRAPI_URL!,
+  auth: process.env.NEXT_PUBLIC_STRAPI_TOKEN!,
 });
 
-export default strapiRequest;
+export const pages = strapiClient.collection("pages");
+
+export const populate = [
+  "metaData",
+  "contents",
+  "contents.banner",
+  "contents.categories",
+  "contents.nested_layout",
+  "contents.nested_layout.contents",
+  "contents.nested_layout.contents.nested_layout",
+  "contents.nested_layout.contents.nested_layout.contents",
+  "page_template.contents",
+  "page_template.contents.header",
+  "page_template.contents.footer",
+  "page_template.contents.pencil_banner_a",
+  "page_template.contents.pencil_banner_b",
+  "page_template.contents.promo_banner",
+];

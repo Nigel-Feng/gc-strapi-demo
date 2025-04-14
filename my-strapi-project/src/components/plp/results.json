@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_plp_results",
+  "info": {
+    "displayName": "Results",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "algoliaQuery": {
+      "type": "json"
+    }
+  }
+}

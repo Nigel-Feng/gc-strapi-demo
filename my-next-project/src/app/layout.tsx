@@ -25,13 +25,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} tailwind antialiased min-h-screen flex flex-col`}>
-        <header className="bg-[#e7e7e7] h-[120px] flex items-center justify-around flex-none">
+        {/* <header className="bg-[#e7e7e7] h-[120px] flex items-center justify-around flex-none">
           <span>Guitar Center Header</span>
         </header>
         <main className="bg-white flex-auto">{children}</main>
         <footer className="bg-[#e7e7e7] h-[120px] flex items-center justify-around flex-none">
           <span>Guitar Center Header</span>
-        </footer>
+        </footer> */}
+        {children}
       </body>
     </html>
   );

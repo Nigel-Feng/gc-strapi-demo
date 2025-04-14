@@ -328,39 +328,40 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
-  collectionName: "globals";
+export interface ApiBannerBanner extends Struct.CollectionTypeSchema {
+  collectionName: "banners";
   info: {
-    description: "Define global settings";
-    displayName: "Global";
-    pluralName: "globals";
-    singularName: "global";
+    description: "";
+    displayName: "Banner";
+    pluralName: "banners";
+    singularName: "banner";
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
+    bgImageUrl: Schema.Attribute.String;
+    buttonText: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
-    defaultSeo: Schema.Attribute.Component<"shared.seo", false>;
-    favicon: Schema.Attribute.Media<"images" | "files" | "videos">;
+    description: Schema.Attribute.String;
+    linkUrl: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<"oneToMany", "api::global.global"> & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<"oneToMany", "api::banner.banner"> & Schema.Attribute.Private;
+    name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    siteDescription: Schema.Attribute.Text & Schema.Attribute.Required;
-    siteName: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
   };
 }
 
-export interface ApiHomeHome extends Struct.CollectionTypeSchema {
-  collectionName: "homes";
+export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
+  collectionName: "categories";
   info: {
-    description: "";
-    displayName: "Home";
-    pluralName: "homes";
-    singularName: "home";
+    displayName: "Category";
+    pluralName: "categories";
+    singularName: "category";
   };
   options: {
     draftAndPublish: true;
@@ -368,67 +369,199 @@ export interface ApiHomeHome extends Struct.CollectionTypeSchema {
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
+    imageUrl: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<"oneToMany", "api::home.home"> & Schema.Attribute.Private;
-    metaData: Schema.Attribute.Component<"shared.seo", false>;
+    localizations: Schema.Attribute.Relation<"oneToMany", "api::category.category"> & Schema.Attribute.Private;
+    name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    sections: Schema.Attribute.DynamicZone<["home.hero-banner", "home.scroll-tiles", "home.daily-pick"]>;
-    slug: Schema.Attribute.UID;
+    seoUrl: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
   };
 }
 
-export interface ApiProductDetailPageProductDetailPage extends Struct.CollectionTypeSchema {
-  collectionName: "product_detail_pages";
+export interface ApiFooterFooter extends Struct.CollectionTypeSchema {
+  collectionName: "footers";
   info: {
     description: "";
-    displayName: "ProductDetailPage";
-    pluralName: "product-detail-pages";
-    singularName: "product-detail-page";
+    displayName: "Footer";
+    pluralName: "footers";
+    singularName: "footer";
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
+    config: Schema.Attribute.JSON;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
-    layout: Schema.Attribute.DynamicZone<["pdp.product-primary-row", "pdp.product-main-content", "shared.breadcrumb"]>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<"oneToMany", "api::product-detail-page.product-detail-page"> &
-      Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<"oneToMany", "api::footer.footer"> & Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required & Schema.Attribute.Unique;
     publishedAt: Schema.Attribute.DateTime;
-    subLayoutMainContent: Schema.Attribute.DynamicZone<["pdp.video", "pdp.article", "pdp.description"]>;
-    subLayoutPrimaryRow: Schema.Attribute.DynamicZone<["pdp.gallery", "pdp.product-detail"]>;
-    subLayoutProductDetail: Schema.Attribute.DynamicZone<
-      ["pdp.price", "pdp.title", "pdp.cta-button", "pdp.delivery-and-store"]
+    type: Schema.Attribute.Enumeration<["Checkout Footer", "Normal Footer"]>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
+  };
+}
+
+export interface ApiHeaderHeader extends Struct.CollectionTypeSchema {
+  collectionName: "headers";
+  info: {
+    description: "";
+    displayName: "Header";
+    pluralName: "headers";
+    singularName: "header";
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    config: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<"oneToMany", "api::header.header"> & Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required & Schema.Attribute.Unique;
+    publishedAt: Schema.Attribute.DateTime;
+    type: Schema.Attribute.Enumeration<["Checkout Header", "Normal Header"]>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
+  };
+}
+
+export interface ApiNestedLayoutNestedLayout extends Struct.CollectionTypeSchema {
+  collectionName: "nested_layouts";
+  info: {
+    description: "";
+    displayName: "NestedLayout";
+    pluralName: "nested-layouts";
+    singularName: "nested-layout";
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contents: Schema.Attribute.DynamicZone<
+      [
+        "shared.shop-by-categories",
+        "shared.html",
+        "shared.breadcrumb",
+        "pdp.video",
+        "pdp.title",
+        "pdp.price",
+        "pdp.gallery",
+        "pdp.description",
+        "pdp.delivery-and-store",
+        "pdp.cta-button",
+        "pdp.article",
+        "references.nested-layout",
+      ]
     >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<"oneToMany", "api::nested-layout.nested-layout"> &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required & Schema.Attribute.Unique;
+    publishedAt: Schema.Attribute.DateTime;
+    type: Schema.Attribute.Enumeration<["vertical", "horizontal"]>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
   };
 }
 
-export interface ApiProductListingPageProductListingPage extends Struct.CollectionTypeSchema {
-  collectionName: "product_listing_pages";
+export interface ApiPageTemplatePageTemplate extends Struct.CollectionTypeSchema {
+  collectionName: "page_templates";
   info: {
     description: "";
-    displayName: "ProductListingPage";
-    pluralName: "product-listing-pages";
-    singularName: "product-listing-page";
+    displayName: "PageTemplate";
+    pluralName: "page-templates";
+    singularName: "page-template";
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    bottomPromotion: Schema.Attribute.DynamicZone<["shared.html"]>;
+    contents: Schema.Attribute.DynamicZone<
+      ["references.footer", "references.header", "placeholder.page-template", "ab-test.pencil-banner"]
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<"oneToMany", "api::product-listing-page.product-listing-page"> &
+    localizations: Schema.Attribute.Relation<"oneToMany", "api::page-template.page-template"> &
       Schema.Attribute.Private;
-    mainContent: Schema.Attribute.Component<"plp.main-content", false>;
+    name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    topPromotion: Schema.Attribute.DynamicZone<["plp.shop-by-brand", "plp.shop-by-category"]>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPagePage extends Struct.CollectionTypeSchema {
+  collectionName: "pages";
+  info: {
+    description: "";
+    displayName: "Page";
+    pluralName: "pages";
+    singularName: "page";
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contents: Schema.Attribute.DynamicZone<
+      [
+        "shared.shop-by-categories",
+        "shared.html",
+        "shared.breadcrumb",
+        "references.banner",
+        "pdp.video",
+        "pdp.title",
+        "pdp.price",
+        "pdp.gallery",
+        "pdp.description",
+        "pdp.delivery-and-store",
+        "pdp.cta-button",
+        "pdp.article",
+        "plp.results",
+        "references.nested-layout",
+        "shared.daily-pick",
+      ]
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<"oneToMany", "api::page.page"> & Schema.Attribute.Private;
+    metaData: Schema.Attribute.Component<"shared.meta-data", false>;
+    name: Schema.Attribute.String;
+    page_template: Schema.Attribute.Relation<"oneToOne", "api::page-template.page-template">;
+    publishedAt: Schema.Attribute.DateTime;
+    seoUrl: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPencilBannerPencilBanner extends Struct.CollectionTypeSchema {
+  collectionName: "pencil_banners";
+  info: {
+    displayName: "PencilBanner";
+    pluralName: "pencil-banners";
+    singularName: "pencil-banner";
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
+    htmlContent: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<"oneToMany", "api::pencil-banner.pencil-banner"> &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
   };
@@ -843,10 +976,14 @@ declare module "@strapi/strapi" {
       "admin::transfer-token": AdminTransferToken;
       "admin::transfer-token-permission": AdminTransferTokenPermission;
       "admin::user": AdminUser;
-      "api::global.global": ApiGlobalGlobal;
-      "api::home.home": ApiHomeHome;
-      "api::product-detail-page.product-detail-page": ApiProductDetailPageProductDetailPage;
-      "api::product-listing-page.product-listing-page": ApiProductListingPageProductListingPage;
+      "api::banner.banner": ApiBannerBanner;
+      "api::category.category": ApiCategoryCategory;
+      "api::footer.footer": ApiFooterFooter;
+      "api::header.header": ApiHeaderHeader;
+      "api::nested-layout.nested-layout": ApiNestedLayoutNestedLayout;
+      "api::page-template.page-template": ApiPageTemplatePageTemplate;
+      "api::page.page": ApiPagePage;
+      "api::pencil-banner.pencil-banner": ApiPencilBannerPencilBanner;
       "plugin::content-releases.release": PluginContentReleasesRelease;
       "plugin::content-releases.release-action": PluginContentReleasesReleaseAction;
       "plugin::i18n.locale": PluginI18NLocale;

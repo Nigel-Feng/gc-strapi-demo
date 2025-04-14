@@ -1,6 +1,6 @@
 const Gallery = ({ imageSrc }: any) => {
   return (
-    <>
+    <section className="px-2 pt-4 pb-8 basis-full flex-auto sticky top-0">
       <div className="w-[600px] h-[600px] mx-auto">
         <img
           alt="Martin HD-28 Standard Dreadnought Acoustic Guitar Natural 1"
@@ -79,7 +79,7 @@ const Gallery = ({ imageSrc }: any) => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

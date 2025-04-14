@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_references_headers",
+  "info": {
+    "displayName": "Header"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::header.header"
+    }
+  }
+}

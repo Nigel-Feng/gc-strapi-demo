@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_ab_test_pencil_banners",
+  "info": {
+    "displayName": "PencilBanner"
+  },
+  "options": {},
+  "attributes": {
+    "pencil_banner_a": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pencil-banner.pencil-banner"
+    },
+    "pencil_banner_b": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pencil-banner.pencil-banner"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

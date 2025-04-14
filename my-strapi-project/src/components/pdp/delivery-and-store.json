@@ -6,11 +6,7 @@
   "options": {},
   "attributes": {
     "name": {
-      "type": "enumeration",
-      "enum": [
-        "DeliveryAndStore "
-      ],
-      "default": "DeliveryAndStore "
+      "type": "string"
     }
   }
 }

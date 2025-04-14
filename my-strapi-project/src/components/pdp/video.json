@@ -1,17 +1,12 @@
 {
   "collectionName": "components_pdp_videos",
   "info": {
-    "displayName": "Video",
-    "description": ""
+    "displayName": "Video"
   },
   "options": {},
   "attributes": {
     "name": {
-      "type": "enumeration",
-      "enum": [
-        "ProductVideo"
-      ],
-      "default": "ProductVideo"
+      "type": "string"
     }
   }
 }
