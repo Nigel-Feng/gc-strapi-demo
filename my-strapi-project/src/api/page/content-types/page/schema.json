@@ -39,7 +39,9 @@
         "pdp.article",
         "plp.results",
         "references.nested-layout",
-        "shared.daily-pick"
+        "shared.daily-pick",
+        "ab-test.pencil-banner",
+        "shared.tag-group"
       ]
     },
     "metaData": {

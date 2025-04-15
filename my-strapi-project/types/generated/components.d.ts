@@ -209,6 +209,17 @@ export interface SharedShopByCategories extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTagGroup extends Struct.ComponentSchema {
+  collectionName: "components_shared_tag_groups";
+  info: {
+    displayName: "TagGroup";
+  };
+  attributes: {
+    tags: Schema.Attribute.Relation<"oneToMany", "api::tag.tag">;
+    title: Schema.Attribute.String;
+  };
+}
+
 declare module "@strapi/strapi" {
   export module Public {
     export interface ComponentSchemas {
@@ -232,6 +243,7 @@ declare module "@strapi/strapi" {
       "shared.html": SharedHtml;
       "shared.meta-data": SharedMetaData;
       "shared.shop-by-categories": SharedShopByCategories;
+      "shared.tag-group": SharedTagGroup;
     }
   }
 }

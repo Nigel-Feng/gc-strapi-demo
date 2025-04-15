@@ -3,7 +3,6 @@ import { cache } from "react";
 import { map } from "lodash";
 import Header from "@/components/shared/header";
 import Footer from "@/components/shared/footer";
-import PencilBanner from "@/components/shared/pencil-banner";
 import PageTemplate from "@/components/shared/page-template";
 
 import "instantsearch.css/themes/satellite-min.css";
@@ -46,9 +45,6 @@ export default async function PreviewPage({ params }: PageParams) {
     switch (content.__component) {
       case "references.header":
         return <Header key={"references.header" + content.id} content={content} />;
-
-      case "ab-test.pencil-banner":
-        return <PencilBanner key={"ab-test.pencil-banner" + content.id} content={content} />;
 
       case "references.footer":
         return <Footer key={"references.footer" + content.id} content={content} />;

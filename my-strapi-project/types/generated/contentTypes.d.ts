@@ -527,6 +527,8 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         "plp.results",
         "references.nested-layout",
         "shared.daily-pick",
+        "ab-test.pencil-banner",
+        "shared.tag-group",
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -562,6 +564,32 @@ export interface ApiPencilBannerPencilBanner extends Struct.CollectionTypeSchema
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTagTag extends Struct.CollectionTypeSchema {
+  collectionName: "tags";
+  info: {
+    description: "";
+    displayName: "Tag";
+    pluralName: "tags";
+    singularName: "tag";
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
+    imageUrl: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<"oneToMany", "api::tag.tag"> & Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    seoUrl: Schema.Attribute.String;
+    type: Schema.Attribute.Enumeration<["category", "brand"]>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
   };
@@ -984,6 +1012,7 @@ declare module "@strapi/strapi" {
       "api::page-template.page-template": ApiPageTemplatePageTemplate;
       "api::page.page": ApiPagePage;
       "api::pencil-banner.pencil-banner": ApiPencilBannerPencilBanner;
+      "api::tag.tag": ApiTagTag;
       "plugin::content-releases.release": PluginContentReleasesRelease;
       "plugin::content-releases.release-action": PluginContentReleasesReleaseAction;
       "plugin::i18n.locale": PluginI18NLocale;

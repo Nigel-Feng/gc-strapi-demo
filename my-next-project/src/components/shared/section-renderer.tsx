@@ -13,6 +13,8 @@ import DeliveryAndStore from "../pdp/product-detail/delivery-and-store";
 import Video from "../pdp/product-main-content/video";
 import Description from "../pdp/product-main-content/description";
 import Article from "../pdp/product-main-content/article";
+import TagGroup from "./tag-group";
+import PencilBanner from "./pencil-banner";
 
 const classNameMap: Record<string, string> = {
   "pdp sub layout primary row":
@@ -79,6 +81,12 @@ const SectionRenderer: React.FC<any> = ({ content }) => {
 
     case "pdp.article":
       return <Article key={"pdp.article" + content.id} />;
+
+    case "shared.tag-group":
+      return <TagGroup key={"shared.tag-group" + content.id} data={content} />;
+
+    case "ab-test.pencil-banner":
+      return <PencilBanner key={"ab-test.pencil-banner" + content.id} content={content} />;
 
     default:
       return null;

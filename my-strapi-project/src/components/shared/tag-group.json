@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_tag_groups",
+  "info": {
+    "displayName": "TagGroup"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    }
+  }
+}
