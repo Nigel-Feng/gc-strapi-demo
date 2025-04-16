@@ -1,4 +1,4 @@
-import { populate, pages } from "@/utils/request";
+import { populate, pages } from "@/utils/strapi";
 import { cache } from "react";
 import { map } from "lodash";
 import Header from "@/components/shared/header";
@@ -7,18 +7,21 @@ import PageTemplate from "@/components/shared/page-template";
 
 import "instantsearch.css/themes/satellite-min.css";
 
-const getPageLayout = cache(async (documentId: string) => {
-  const response = await pages.findOne(documentId, { populate: populate });
+type PageParams = { params: Promise<{ documentId: string }>; searchParams: Promise<{ status: string }> };
+
+const getPageLayout = cache(async (documentId: string, status: string) => {
+  const response = await pages.findOne(documentId, { populate, status: status as any, preview: true } as any);
 
   const layout = response.data;
 
   return layout;
 });
 
-export const generateMetadata = async ({ params }: PageParams) => {
+export const generateMetadata = async ({ params, searchParams }: PageParams) => {
   const { documentId } = await params;
+  const { status } = await searchParams;
 
-  const layout = await getPageLayout(documentId);
+  const layout = await getPageLayout(documentId, status);
 
   if (!layout) {
     return null;
@@ -30,12 +33,11 @@ export const generateMetadata = async ({ params }: PageParams) => {
   };
 };
 
-type PageParams = { params: Promise<{ documentId: string }> };
-
-export default async function PreviewPage({ params }: PageParams) {
+export default async function PreviewPage({ params, searchParams }: PageParams) {
   const { documentId } = await params;
+  const { status } = await searchParams;
 
-  const layout = await getPageLayout(documentId);
+  const layout = await getPageLayout(documentId, status);
 
   if (!layout) {
     return <div className="text-center">Layout not found</div>;

@@ -48,6 +48,14 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.meta-data"
+    },
+    "publish_state": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "previewed"
+      ],
+      "default": "draft"
     }
   }
 }

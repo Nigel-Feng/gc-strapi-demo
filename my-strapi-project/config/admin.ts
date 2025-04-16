@@ -20,7 +20,7 @@ export default ({ env }) => ({
       allowedOrigins: "*",
       async handler(uid, { documentId, locale, status }) {
         if (uid === "api::page.page") {
-          return `${env("PREVIEW_CLIENT_URL")}/preview/${documentId}`;
+          return `${env("PREVIEW_CLIENT_URL")}/preview/${documentId}?status=${status}`;
         }
 
         return null;

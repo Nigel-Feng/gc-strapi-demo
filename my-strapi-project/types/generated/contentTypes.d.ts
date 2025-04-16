@@ -538,6 +538,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     metaData: Schema.Attribute.Component<"shared.meta-data", false>;
     name: Schema.Attribute.String;
     page_template: Schema.Attribute.Relation<"oneToOne", "api::page-template.page-template">;
+    publish_state: Schema.Attribute.Enumeration<["draft", "previewed"]> & Schema.Attribute.DefaultTo<"draft">;
     publishedAt: Schema.Attribute.DateTime;
     seoUrl: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;

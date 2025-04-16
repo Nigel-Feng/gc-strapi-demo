@@ -1,4 +1,4 @@
-import { populate, pages } from "@/utils/request";
+import { populate, pages } from "@/utils/strapi";
 import { cache } from "react";
 import { map } from "lodash";
 import Header from "@/components/shared/header";
