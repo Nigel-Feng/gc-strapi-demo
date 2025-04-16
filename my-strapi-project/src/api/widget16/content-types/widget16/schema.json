@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "widget16s",
+  "info": {
+    "singularName": "widget16",
+    "pluralName": "widget16s",
+    "displayName": "widget16"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

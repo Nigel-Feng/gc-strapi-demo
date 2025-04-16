@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "widget30s",
+  "info": {
+    "singularName": "widget30",
+    "pluralName": "widget30s",
+    "displayName": "widget30"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

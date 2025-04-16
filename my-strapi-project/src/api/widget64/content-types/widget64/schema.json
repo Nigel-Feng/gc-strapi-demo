@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "widget64s",
+  "info": {
+    "singularName": "widget64",
+    "pluralName": "widget64s",
+    "displayName": "widget64"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

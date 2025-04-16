@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "widget32s",
+  "info": {
+    "singularName": "widget32",
+    "pluralName": "widget32s",
+    "displayName": "widget32"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+/**
+ * widget93 router
+ */
+
+import { factories } from '@strapi/strapi';
+
+export default factories.createCoreRouter('api::widget93.widget93');

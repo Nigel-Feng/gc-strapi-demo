@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "widget90s",
+  "info": {
+    "singularName": "widget90",
+    "pluralName": "widget90s",
+    "displayName": "widget90"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "widget80s",
+  "info": {
+    "singularName": "widget80",
+    "pluralName": "widget80s",
+    "displayName": "widget80"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

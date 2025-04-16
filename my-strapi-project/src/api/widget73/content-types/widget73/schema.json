@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "widget73s",
+  "info": {
+    "singularName": "widget73",
+    "pluralName": "widget73s",
+    "displayName": "widget73"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

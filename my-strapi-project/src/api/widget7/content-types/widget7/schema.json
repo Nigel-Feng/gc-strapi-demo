@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "widget7s",
+  "info": {
+    "singularName": "widget7",
+    "pluralName": "widget7s",
+    "displayName": "widget7"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
