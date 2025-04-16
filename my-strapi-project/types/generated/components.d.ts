@@ -156,6 +156,17 @@ export interface ReferencesNestedLayout extends Struct.ComponentSchema {
   };
 }
 
+export interface ReferencesWidgetComponent extends Struct.ComponentSchema {
+  collectionName: "components_references_widget_components";
+  info: {
+    displayName: "widgetComponent";
+    icon: "dashboard";
+  };
+  attributes: {
+    widgets: Schema.Attribute.Relation<"oneToMany", "api::widget.widget">;
+  };
+}
+
 export interface SharedBreadcrumb extends Struct.ComponentSchema {
   collectionName: "components_shared_breadcrumbs";
   info: {
@@ -238,6 +249,7 @@ declare module "@strapi/strapi" {
       "references.footer": ReferencesFooter;
       "references.header": ReferencesHeader;
       "references.nested-layout": ReferencesNestedLayout;
+      "references.widget-component": ReferencesWidgetComponent;
       "shared.breadcrumb": SharedBreadcrumb;
       "shared.daily-pick": SharedDailyPick;
       "shared.html": SharedHtml;

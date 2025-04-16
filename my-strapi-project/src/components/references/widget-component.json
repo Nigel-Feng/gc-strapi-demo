@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_references_widget_components",
+  "info": {
+    "displayName": "widgetComponent",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "widgets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::widget.widget"
+    }
+  }
+}
