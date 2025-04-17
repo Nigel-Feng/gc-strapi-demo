@@ -26,3 +26,185 @@ body {
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.footer-engage-wrap.jsx-cb9db1aea8bb585e {
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e ul.jsx-cb9db1aea8bb585e li.jsx-cb9db1aea8bb585e {
+  position: relative;
+  height: 70px;
+  text-align: center;
+  cursor: pointer;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  ul.jsx-cb9db1aea8bb585e
+  li.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e:hover
+  p.jsx-cb9db1aea8bb585e {
+  color: #cd2418;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  ul.jsx-cb9db1aea8bb585e
+  li.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  a.jsx-cb9db1aea8bb585e {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  ul.jsx-cb9db1aea8bb585e
+  li.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e::before {
+  display: inline-block;
+  width: 66px;
+  height: 43px;
+  background: url(https://www.guitarcenter.com/assets/images/common/sprite-gc-global.png) no-repeat -348px -122px;
+  content: "";
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  ul.jsx-cb9db1aea8bb585e
+  li.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  p.jsx-cb9db1aea8bb585e {
+  display: block;
+  width: 100%;
+  color: #000;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .footer-engage-wrap.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+    ul.jsx-cb9db1aea8bb585e
+    li.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+    p.jsx-cb9db1aea8bb585e {
+    max-width: 70px;
+    font-size: 12px;
+    white-space: normal;
+  }
+}
+
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .ways-to-shop-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.jsx-cb9db1aea8bb585e {
+  width: 62px;
+  font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .ways-to-shop-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.jsx-cb9db1aea8bb585e.hidden.jsx-cb9db1aea8bb585e {
+  display: none;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .ways-to-shop-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.financing.jsx-cb9db1aea8bb585e::before {
+  background-position: -348px -122px;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .ways-to-shop-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.financing.jsx-cb9db1aea8bb585e:hover::before {
+  background-position: -348px -171px;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .ways-to-shop-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.apps.jsx-cb9db1aea8bb585e::before {
+  width: 32px;
+  background-position: -437px -122px;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .ways-to-shop-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.apps.jsx-cb9db1aea8bb585e:hover::before {
+  background-position: -437px -171px;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .ways-to-shop-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.catalog.jsx-cb9db1aea8bb585e::before {
+  width: 51px;
+  background-position: -492px -122px;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .ways-to-shop-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.catalog.jsx-cb9db1aea8bb585e:hover::before {
+  background-position: -492px -171px;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .ways-to-shop-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.gift-cards.jsx-cb9db1aea8bb585e::before {
+  width: 68px;
+  background-position: -565px -122px;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .ways-to-shop-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.gift-cards.jsx-cb9db1aea8bb585e:hover::before {
+  background-position: -565px -171px;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .ways-to-shop-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.phone.jsx-cb9db1aea8bb585e::before {
+  width: 41px;
+  background-position: -646px -122px;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .ways-to-shop-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.phone.jsx-cb9db1aea8bb585e:hover::before {
+  background-position: -646px -171px;
+}
+
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .social-media-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.jsx-cb9db1aea8bb585e {
+  width: 20%;
+  font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .social-media-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.jsx-cb9db1aea8bb585e::before {
+  width: 44px !important;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .social-media-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.facebook.jsx-cb9db1aea8bb585e::before {
+  background-position: -248px -217px;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .social-media-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.facebook.jsx-cb9db1aea8bb585e:hover::before {
+  background-position: -298px -217px;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .social-media-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.twitter.jsx-cb9db1aea8bb585e::before {
+  background-position: -352px -217px;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .social-media-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.twitter.jsx-cb9db1aea8bb585e:hover::before {
+  background-position: -409px -217px;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .social-media-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.youtube.jsx-cb9db1aea8bb585e::before {
+  background-position: -463px -217px;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .social-media-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.youtube.jsx-cb9db1aea8bb585e:hover::before {
+  background-position: -517px -217px;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .social-media-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.instagram.jsx-cb9db1aea8bb585e::before {
+  background-position: -573px -217px;
+}
+.footer-engage-wrap.jsx-cb9db1aea8bb585e
+  .social-media-list.jsx-cb9db1aea8bb585e.jsx-cb9db1aea8bb585e
+  li.instagram.jsx-cb9db1aea8bb585e:hover::before {
+  background-position: -630px -217px;
+}
+
+.footer-bbb-links-wrap .bbb-links .bbb-img {
+  display: inline-block;
+  width: 48px;
+  height: 93px;
+  text-indent: -9999px;
+  background: url(https://www.guitarcenter.com/assets/images/common/sprite-gc-global.png) no-repeat -56px 0;
+}

@@ -43,6 +43,8 @@ export default async function PreviewPage({ params, searchParams }: PageParams) 
     return <div className="text-center">Layout not found</div>;
   }
 
+  // console.log(JSON.stringify(layout, null, 2));
+
   return map(layout.page_template.contents, (content) => {
     switch (content.__component) {
       case "references.header":
